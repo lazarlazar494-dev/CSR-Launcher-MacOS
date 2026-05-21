@@ -1,0 +1,10 @@
+{
+  "name": "Example Language",
+  "code": "example",
+  "title": "CSR Launcher",
+  "nav_home": "Home",
+  "nav_settings": "Settings",
+  "nav_play": "Play",
+  "button_play": "PLAY",
+  "button_close": "Close"
+}

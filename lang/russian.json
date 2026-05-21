@@ -1,0 +1,79 @@
+{
+  "name": "Russian",
+  "code": "ru",
+
+  "title": "CSR Launcher Beta",
+
+  "nav_home": "Главная",
+  "nav_inventory": "Инвентарь",
+  "nav_settings": "Настройки",
+
+  "btn_login": "Войти через Discord",
+  "btn_logout": "Выйти",
+  "user_unverified": "Unverified",
+
+  "hero_title": "CSR Launcher",
+  "hero_subtitle": "Counter-Strike: Restored",
+  "btn_launch": "Играть",
+
+  "page_inventory_title": "Инвентарь CS:Restored",
+  "btn_refresh": "Обновить",
+  "inventory_count": "{count} предметов",
+  "inventory_loading": "Загрузка инвентаря...",
+  "inventory_empty_login": "Войдите через Discord для загрузки инвентаря",
+  "inventory_empty": "Инвентарь пуст",
+  "inventory_error": "Ошибка загрузки инвентаря. Войдите через Discord.",
+  "float_label": "Float: {value}",
+
+  "page_settings_title": "Настройки",
+
+  "settings_game_folder_title": "Папка с игрой",
+  "settings_game_folder_label": "Путь к папке CS:GO",
+  "settings_game_folder_hint": "Папка где лежит csgo.exe",
+
+  "settings_launch_title": "Запуск",
+  "settings_launch_label": "Аргументы запуска",
+  "settings_launch_hint": "Дополнительные аргументы командной строки",
+
+  "settings_dpi_title": "Обход блокировок",
+  "dpi_status_running": "Запущен",
+  "dpi_status_stopped": "Не запущен",
+  "btn_dpi_start": "Запустить",
+  "btn_dpi_stop": "Остановить",
+  "dpi_hint": "Обходит блокировку Cloudflare для csrestored.fun. Требует прав администратора.",
+
+  "btn_save_settings": "Сохранить настройки",
+  "settings_saved": "Сохранено!",
+
+  "modal_update_title": "Обновление CS:Restored",
+  "btn_cancel_download": "Отменить",
+  "btn_close": "Закрыть",
+
+  "launch_checking": "Проверка файлов...",
+  "launch_launching": "Запуск...",
+  "launch_no_dir": "Укажите папку с игрой в настройках.",
+  "launch_not_logged_in": "Необходимо войти в аккаунт.",
+
+  "modal_downloading": "Скачивание {count} файлов ({size} MB)...",
+  "modal_cancelled": "Загрузка отменена. Игра не запущена.",
+  "modal_failed": "{failed} файлов не скачано",
+  "modal_success": "Обновление завершено! Запуск...",
+  "modal_update_all_current": "Все файлы обновлены!",
+  "modal_download_need": "Нужно скачать {count} файлов ({size} MB). Начинаю загрузку...",
+  "modal_success_download": "Успешно! Скачано {downloaded} файлов",
+  "modal_cancel_text": "Загрузка отменена",
+  "modal_error_check": "Ошибка проверки обновлений",
+  "modal_error_download": "Ошибка загрузки",
+
+  "install_not_installed_hint": "Укажите папку CS:Restored",
+  "install_installed_hint": "Папка CS:Restored выбрана",
+  "btn_update_check": "Проверить обновления",
+
+  "settings_language_label": "Язык",
+  "settings_appearance_title": "Внешний вид",
+  "settings_theme_label": "Тема",
+  "theme_dark": "Тёмная",
+  "theme_darker": "Очень тёмная",
+  "theme_blue": "Синяя",
+  "theme_csgo": "CS:GO"
+}

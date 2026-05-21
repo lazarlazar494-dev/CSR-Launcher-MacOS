@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' http://127.0.0.1:3000 https://api.csrestored.fun;">
+  <title>CSR Launcher</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Top Bar -->
+    <header class="topbar" id="topbar">
+      <div class="topbar-logo">
+        <span>CS:<span class="logo-red">R</span></span>
+      </div>
+      <div class="topbar-right">
+        <div class="topbar-user" id="topbar-user" style="display: none;">
+          <div style="position: relative;">
+            <img class="topbar-user-avatar" id="topbar-avatar" src="" alt="Avatar">
+            <div class="topbar-user-unverified" id="topbar-unverified" style="display: none;">
+              <i class="fa-solid fa-circle"></i>
+            </div>
+          </div>
+          <span class="topbar-user-name" id="topbar-name"></span>
+        </div>
+        <button class="btn-auth-login" id="btn-login" style="margin: 0; padding: 8px 16px;">
+          <i class="fa-brands fa-discord"></i>
+          <span data-i18n="btn_login"></span>
+        </button>
+      </div>
+    </header>
+        <div id="window-controls" style="display:none;">
+          <button id="btn-minimize"></button>
+          <button id="btn-maximize"></button>
+          <button id="btn-close"></button>
+        </div>
+
+    <div class="main-content">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <nav class="sidebar-nav">
+          <a href="#" class="nav-item active" data-page="home">
+            <i class="fa-solid fa-house"></i>
+            <span data-i18n="nav_home"></span>
+          </a>
+          <a href="#" class="nav-item" data-page="inventory">
+            <i class="fa-solid fa-briefcase"></i>
+            <span data-i18n="nav_inventory"></span>
+          </a>
+          <a href="#" class="nav-item" data-page="settings">
+            <i class="fa-solid fa-gear"></i>
+            <span data-i18n="nav_settings"></span>
+          </a>
+        </nav>
+      </aside>
+
+      <!-- Content -->
+      <main class="content">
+        <!-- Home Page -->
+        <div class="page active" id="page-home">
+          <div class="hero-section">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+              <h1 data-i18n="hero_title"></h1>
+              <p data-i18n="hero_subtitle"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Inventory Page -->
+        <div class="page" id="page-inventory">
+          <div class="page-header">
+            <h2 data-i18n="page_inventory_title"></h2>
+          </div>
+          <div class="inventory-controls">
+            <button class="btn-secondary" id="btn-refresh-inventory">
+              <i class="fa-solid fa-rotate"></i>
+              <span data-i18n="btn_refresh"></span>
+            </button>
+            <span class="inventory-count" id="inventory-count"></span>
+            <span class="inventory-coins" id="inventory-coins"></span>
+          </div>
+          <div class="inventory-loading" id="inventory-loading" style="display: none;">
+            <i class="fa-solid fa-spinner fa-spin"></i>
+            <p data-i18n="inventory_loading"></p>
+          </div>
+          <div class="inventory-grid" id="inventory-grid">
+            <div class="empty-state">
+              <i class="fa-solid fa-briefcase"></i>
+              <p data-i18n="inventory_empty_login"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Settings Page -->
+        <div class="page" id="page-settings">
+          <div class="page-header">
+            <h2 data-i18n="page_settings_title"></h2>
+          </div>
+          <div class="settings-grid">
+            <div class="card">
+              <div class="card-header">
+                <i class="fa-solid fa-folder-open"></i>
+                <h3 data-i18n="settings_game_folder_title"></h3>
+              </div>
+              <div class="card-body">
+                <div class="input-group">
+                  <label for="csgo-dir" data-i18n="settings_game_folder_label"></label>
+                  <div class="input-with-btn">
+                    <input type="text" id="csgo-dir" placeholder="C:\Games\CSRestored">
+                    <button class="btn-secondary" id="btn-browse-dir">
+                      <i class="fa-solid fa-folder"></i>
+                    </button>
+                  </div>
+                  <p class="input-hint" data-i18n="settings_game_folder_hint"></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <i class="fa-solid fa-terminal"></i>
+                <h3 data-i18n="settings_launch_title"></h3>
+              </div>
+              <div class="card-body">
+                <div class="input-group">
+                  <label for="launch-args" data-i18n="settings_launch_label"></label>
+                  <input type="text" id="launch-args" placeholder="-novid -console -language japanese">
+                  <p class="input-hint" data-i18n="settings_launch_hint"></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <i class="fa-solid fa-language"></i>
+                <h3 data-i18n="settings_language_label"></h3>
+              </div>
+              <div class="card-body">
+                <div class="input-group">
+                  <select id="language-select"></select>
+                </div>
+              </div>
+            </div>
+          </div>
+      </main>
+    </div>
+
+    <!-- Bottom Bar -->
+    <footer class="bottombar">
+      <div class="bottombar-actions">
+        <button class="btn-play" id="btn-launch-game">
+          <i class="fa-solid fa-play"></i>
+          <span class="play-text" data-i18n="btn_launch"></span>
+        </button>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="modal-install">
+    <div class="modal">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-download"></i> <span data-i18n="modal_update_title"></span></h3>
+      </div>
+      <div class="modal-body">
+        <div class="install-progress" id="install-progress">
+          <div class="progress-spinner">
+            <i class="fa-solid fa-spinner fa-spin"></i>
+          </div>
+          <div class="progress-status" id="progress-status"></div>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" id="modal-progress-fill"></div>
+          </div>
+          <div class="progress-steps" id="progress-steps"></div>
+        </div>
+        <div class="install-result" id="install-result"></div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary" id="btn-cancel-download" style="display:none" data-i18n="btn_cancel_download"></button>
+        <button class="btn-primary" id="btn-modal-close" style="display:none" data-i18n="btn_close"></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
