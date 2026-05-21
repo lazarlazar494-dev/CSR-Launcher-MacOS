@@ -1,0 +1,49 @@
+{
+  "name": "csr-launcher",
+  "version": "1.0.1",
+  "description": "CSR Launcher - Counter-Strike Game Launcher",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "build:win": "electron-builder --win"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^42.0.0",
+    "electron-builder": "^25.0.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "discord-rpc": "^4.0.1",
+    "express": "^4.21.0"
+  },
+  "build": {
+    "appId": "com.csr.launcher",
+    "productName": "CSR Launcher",
+    "mac": {
+      "target": "dmg",
+      "category": "games"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "CSR Launcher"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ],
+      "requestedExecutionLevel": "requireAdministrator",
+      "signAndEditExecutable": false
+    },
+    "afterSign": null
+  }
+}
