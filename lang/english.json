@@ -1,0 +1,79 @@
+{
+  "name": "English",
+  "code": "en",
+
+  "title": "CSR Launcher Beta",
+
+  "nav_home": "Home",
+  "nav_inventory": "Inventory",
+  "nav_settings": "Settings",
+
+  "btn_login": "Login via Discord",
+  "btn_logout": "Logout",
+  "user_unverified": "Unverified",
+
+  "hero_title": "CSR Launcher",
+  "hero_subtitle": "Counter-Strike: Restored",
+  "btn_launch": "Play",
+
+  "page_inventory_title": "CS:Restored Inventory",
+  "btn_refresh": "Refresh",
+  "inventory_count": "{count} items",
+  "inventory_loading": "Loading inventory...",
+  "inventory_empty_login": "Login via Discord to load inventory",
+  "inventory_empty": "Inventory is empty",
+  "inventory_error": "Failed to load inventory. Login via Discord.",
+  "float_label": "Float: {value}",
+
+  "page_settings_title": "Settings",
+
+  "settings_game_folder_title": "Game Folder",
+  "settings_game_folder_label": "Path to CS:GO folder",
+  "settings_game_folder_hint": "Folder containing csgo.exe",
+
+  "settings_launch_title": "Launch",
+  "settings_launch_label": "Launch Arguments",
+  "settings_launch_hint": "Additional command line arguments",
+
+  "settings_dpi_title": "Censorship bypass",
+  "dpi_status_running": "Running",
+  "dpi_status_stopped": "Not running",
+  "btn_dpi_start": "Start",
+  "btn_dpi_stop": "Stop",
+  "dpi_hint": "Bypasses Cloudflare blocking for csrestored.fun. Requires admin rights.",
+
+  "btn_save_settings": "Save Settings",
+  "settings_saved": "Saved!",
+
+  "modal_update_title": "CS:Restored Update",
+  "btn_cancel_download": "Cancel",
+  "btn_close": "Close",
+
+  "launch_checking": "Checking files...",
+  "launch_launching": "Launching...",
+  "launch_no_dir": "Set game folder in Settings.",
+  "launch_not_logged_in": "You need to log in first.",
+
+  "modal_downloading": "Downloading {count} files ({size} MB)...",
+  "modal_cancelled": "Download cancelled. Game not launched.",
+  "modal_failed": "{failed} files failed to download",
+  "modal_success": "Update complete! Launching...",
+  "modal_update_all_current": "All files are up to date!",
+  "modal_download_need": "Need to download {count} files ({size} MB). Starting download...",
+  "modal_success_download": "Success! Downloaded {downloaded} files",
+  "modal_cancel_text": "Download cancelled",
+  "modal_error_check": "Failed to check for updates",
+  "modal_error_download": "Download error",
+
+  "install_not_installed_hint": "Select the CS:Restored folder",
+  "install_installed_hint": "CS:Restored folder selected",
+  "btn_update_check": "Check for Updates",
+
+  "settings_language_label": "Language",
+  "settings_appearance_title": "Appearance",
+  "settings_theme_label": "Theme",
+  "theme_dark": "Dark",
+  "theme_darker": "Very Dark",
+  "theme_blue": "Blue",
+  "theme_csgo": "CS:GO"
+}
